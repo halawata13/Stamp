@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jtp-H5-hFr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--表示する期間-->
+        <scene sceneID="Bbl-8u-9lL">
+            <objects>
+                <viewController id="601-yL-EQl" customClass="DateRangeSelectorViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e9n-sa-B4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QRR-Qa-7S2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateRangeSelectorTableViewCell" id="5tD-LE-Ir4" customClass="DateRangeSelectorTableViewCell" customModule="Stamp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5tD-LE-Ir4" id="qlR-tr-7vN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QRR-Qa-7S2" firstAttribute="trailing" secondItem="Ark-1X-cgN" secondAttribute="trailing" id="Ckw-Fa-YtP"/>
+                            <constraint firstItem="QRR-Qa-7S2" firstAttribute="top" secondItem="Ark-1X-cgN" secondAttribute="top" id="HIT-Xd-vNL"/>
+                            <constraint firstItem="QRR-Qa-7S2" firstAttribute="bottom" secondItem="Ark-1X-cgN" secondAttribute="bottom" id="g2M-JU-dsi"/>
+                            <constraint firstItem="QRR-Qa-7S2" firstAttribute="leading" secondItem="Ark-1X-cgN" secondAttribute="leading" id="nG8-Ym-3nE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ark-1X-cgN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="表示する期間" id="zI3-fF-PFW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GHz-9k-Lk1">
+                            <connections>
+                                <action selector="onTapCancelButton:" destination="601-yL-EQl" id="YGL-Xj-ybp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="QRR-Qa-7S2" id="F8x-31-Yvn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihC-VC-iXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="174.96251874062969"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Gt0-Jz-dpN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jtp-H5-hFr" customClass="BaseNavigationController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wr9-dH-4AT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="601-yL-EQl" kind="relationship" relationship="rootViewController" id="Bkg-AY-o7U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Y1-ur-XGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="175"/>
+        </scene>
+    </scenes>
+</document>

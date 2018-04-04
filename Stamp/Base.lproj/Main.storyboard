@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GtB-VZ-wEA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--現在地の記録-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="S2v-dB-mar" customClass="SingleLocationMapView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNe-Vt-Qai" customClass="RecordButton" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="155" y="524" width="64" height="64"/>
+                                <state key="normal" image="stamp"/>
+                                <connections>
+                                    <action selector="onTapRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HNN-Iz-zZe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S2v-dB-mar" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="09w-B1-Jd4"/>
+                            <constraint firstItem="FNe-Vt-Qai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6WK-HE-qCC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FNe-Vt-Qai" secondAttribute="bottom" constant="30" id="Img-yU-lQY"/>
+                            <constraint firstItem="S2v-dB-mar" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PTM-X0-kvn"/>
+                            <constraint firstItem="S2v-dB-mar" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WR2-4N-62S"/>
+                            <constraint firstItem="S2v-dB-mar" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jDj-ag-MSJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="現在地の記録" id="aNs-Vt-kPz"/>
+                    <connections>
+                        <outlet property="mapView" destination="S2v-dB-mar" id="BVy-Qa-8av"/>
+                        <outlet property="recordButton" destination="FNe-Vt-Qai" id="L9q-4j-TKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="134"/>
+        </scene>
+        <!--足跡リスト-->
+        <scene sceneID="3zs-xP-NHK">
+            <objects>
+                <viewController id="ne8-V7-Yfp" customClass="HistoryListViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C8s-qy-k7E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEw-1p-PpT" customClass="DateRangeLabelView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="dLJ-yq-zze"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AqS-cU-DHp">
+                                <rect key="frame" x="0.0" y="110" width="375" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HistoryTableViewCell" rowHeight="58" id="TpV-mN-IOc" customClass="HistoryListTableViewCell" customModule="Stamp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TpV-mN-IOc" id="Mp5-z8-P6m">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鶴岡八幡宮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nh-Fw-ldC">
+                                                    <rect key="frame" x="15" y="28.5" width="327" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idC-Ni-Qhk">
+                                                    <rect key="frame" x="15" y="8" width="50.5" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="mHU-4K-Z22"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7it-Wd-Dwj">
+                                                    <rect key="frame" x="77.5" y="8" width="264.5" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="9nw-Ec-U7H"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7it-Wd-Dwj" firstAttribute="top" secondItem="Mp5-z8-P6m" secondAttribute="top" constant="8" id="GYv-8g-hG4"/>
+                                                <constraint firstItem="idC-Ni-Qhk" firstAttribute="leading" secondItem="Mp5-z8-P6m" secondAttribute="leading" constant="15" id="d25-QB-Gw8"/>
+                                                <constraint firstItem="7it-Wd-Dwj" firstAttribute="leading" secondItem="idC-Ni-Qhk" secondAttribute="trailing" constant="12" id="kaW-qR-wH6"/>
+                                                <constraint firstAttribute="bottom" secondItem="3nh-Fw-ldC" secondAttribute="bottom" constant="8" id="swk-fr-cOb"/>
+                                                <constraint firstItem="idC-Ni-Qhk" firstAttribute="top" secondItem="Mp5-z8-P6m" secondAttribute="top" constant="8" id="uST-by-frV"/>
+                                                <constraint firstAttribute="trailing" secondItem="3nh-Fw-ldC" secondAttribute="trailing" id="xQP-Ah-TjY"/>
+                                                <constraint firstItem="3nh-Fw-ldC" firstAttribute="leading" secondItem="Mp5-z8-P6m" secondAttribute="leading" constant="15" id="y5m-Ki-uHV"/>
+                                                <constraint firstAttribute="trailing" secondItem="7it-Wd-Dwj" secondAttribute="trailing" id="y8J-RS-NGr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coordinateLabel" destination="7it-Wd-Dwj" id="Oq8-nN-pCh"/>
+                                            <outlet property="memoLabel" destination="3nh-Fw-ldC" id="dfl-q4-wNj"/>
+                                            <outlet property="timeLabel" destination="idC-Ni-Qhk" id="sfj-Bh-DMH"/>
+                                            <segue destination="n3b-6j-Itx" kind="show" identifier="HistoryDetailSegue" id="qbA-QO-172"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xEw-1p-PpT" firstAttribute="trailing" secondItem="68t-g3-ZVM" secondAttribute="trailing" id="7sl-Bu-Tqt"/>
+                            <constraint firstItem="AqS-cU-DHp" firstAttribute="trailing" secondItem="68t-g3-ZVM" secondAttribute="trailing" id="8y6-Os-nyh"/>
+                            <constraint firstItem="xEw-1p-PpT" firstAttribute="leading" secondItem="68t-g3-ZVM" secondAttribute="leading" id="CUI-Ol-Zw8"/>
+                            <constraint firstItem="AqS-cU-DHp" firstAttribute="leading" secondItem="68t-g3-ZVM" secondAttribute="leading" id="EnI-vB-lOw"/>
+                            <constraint firstItem="AqS-cU-DHp" firstAttribute="bottom" secondItem="68t-g3-ZVM" secondAttribute="bottom" id="R8p-yz-wKp"/>
+                            <constraint firstItem="xEw-1p-PpT" firstAttribute="top" secondItem="68t-g3-ZVM" secondAttribute="top" id="qxh-3a-bMJ"/>
+                            <constraint firstItem="AqS-cU-DHp" firstAttribute="top" secondItem="xEw-1p-PpT" secondAttribute="bottom" id="s7e-Xz-OQW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="68t-g3-ZVM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="足跡リスト" id="la1-cB-D3d"/>
+                    <connections>
+                        <outlet property="dateRangeLabelView" destination="xEw-1p-PpT" id="zbX-mQ-H1E"/>
+                        <outlet property="historyTableView" destination="AqS-cU-DHp" id="7P1-VX-0uT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d8f-Ir-Uq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184.8" y="826.23688155922048"/>
+        </scene>
+        <!--History Detail View Controller-->
+        <scene sceneID="VmJ-qa-Zxq">
+            <objects>
+                <viewController storyboardIdentifier="HistoryDetailViewController" id="n3b-6j-Itx" customClass="HistoryDetailViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2B2-BP-XeD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G96-4X-Zwt" customClass="SingleLocationMapView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-sM-1oe" customClass="LocationInfoView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="518" width="375" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3o0-gz-6Ne"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G96-4X-Zwt" firstAttribute="bottom" secondItem="RrD-sq-QpT" secondAttribute="bottom" id="2p6-Ph-ceR"/>
+                            <constraint firstItem="G96-4X-Zwt" firstAttribute="leading" secondItem="RrD-sq-QpT" secondAttribute="leading" id="6xV-Qa-lmt"/>
+                            <constraint firstItem="w4V-sM-1oe" firstAttribute="leading" secondItem="RrD-sq-QpT" secondAttribute="leading" id="8Z4-1F-gmI"/>
+                            <constraint firstItem="w4V-sM-1oe" firstAttribute="bottom" secondItem="RrD-sq-QpT" secondAttribute="bottom" id="AKW-QF-FeR"/>
+                            <constraint firstItem="G96-4X-Zwt" firstAttribute="top" secondItem="RrD-sq-QpT" secondAttribute="top" id="K0D-Xf-CmL"/>
+                            <constraint firstItem="w4V-sM-1oe" firstAttribute="trailing" secondItem="RrD-sq-QpT" secondAttribute="trailing" id="PKG-Fj-rlD"/>
+                            <constraint firstItem="G96-4X-Zwt" firstAttribute="trailing" secondItem="RrD-sq-QpT" secondAttribute="trailing" id="aal-Gk-pim"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RrD-sq-QpT"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationInfoView" destination="w4V-sM-1oe" id="lR5-Ke-sWk"/>
+                        <outlet property="mapView" destination="G96-4X-Zwt" id="Zmi-d8-Rjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pIl-Uh-Dn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1896.8" y="825.33733133433293"/>
+        </scene>
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="NYY-kM-uYi">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GtB-VZ-wEA" customClass="BaseTabBarController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xyE-6P-SBa">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dNN-gO-QkP" kind="relationship" relationship="viewControllers" id="nsl-yV-fBa"/>
+                        <segue destination="4hg-kS-ryA" kind="relationship" relationship="viewControllers" id="tha-i7-z0g"/>
+                        <segue destination="mEy-2f-hmL" kind="relationship" relationship="viewControllers" id="0kZ-4i-qgg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5d-iI-Haf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="825"/>
+        </scene>
+        <!--足跡リスト-->
+        <scene sceneID="BPf-vB-sgN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4hg-kS-ryA" customClass="BaseNavigationController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="足跡リスト" image="pins" id="6KM-7g-S39"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zgC-bp-tAj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ne8-V7-Yfp" kind="relationship" relationship="rootViewController" id="hCs-qj-wKb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F9i-VE-hrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475.19999999999999" y="827.58620689655174"/>
+        </scene>
+        <!--足跡マップ-->
+        <scene sceneID="xVE-x9-YlV">
+            <objects>
+                <viewController id="nbJ-cC-FXV" customClass="HistoryMapViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5q-a6-1cK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-FI-hn1" customClass="DateRangeLabelView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="tMM-ku-Eui"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gKd-Ln-acb" customClass="HistoryMapView" customModule="Stamp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="110" width="375" height="508"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gKd-Ln-acb" firstAttribute="bottom" secondItem="vPT-3n-7JI" secondAttribute="bottom" id="2ss-UR-gGX"/>
+                            <constraint firstItem="cRA-FI-hn1" firstAttribute="leading" secondItem="vPT-3n-7JI" secondAttribute="leading" id="BmW-bu-5pa"/>
+                            <constraint firstItem="gKd-Ln-acb" firstAttribute="leading" secondItem="vPT-3n-7JI" secondAttribute="leading" id="P9b-go-s35"/>
+                            <constraint firstItem="gKd-Ln-acb" firstAttribute="trailing" secondItem="vPT-3n-7JI" secondAttribute="trailing" id="VI0-8Q-3PN"/>
+                            <constraint firstItem="gKd-Ln-acb" firstAttribute="top" secondItem="cRA-FI-hn1" secondAttribute="bottom" id="f9n-rC-a9g"/>
+                            <constraint firstItem="cRA-FI-hn1" firstAttribute="top" secondItem="vPT-3n-7JI" secondAttribute="top" id="n1Q-7y-Chs"/>
+                            <constraint firstItem="cRA-FI-hn1" firstAttribute="trailing" secondItem="vPT-3n-7JI" secondAttribute="trailing" id="qzl-yz-YKd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vPT-3n-7JI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="足跡マップ" id="MBW-fV-ft4"/>
+                    <connections>
+                        <outlet property="dateRangeLabelView" destination="cRA-FI-hn1" id="QaB-CN-AZH"/>
+                        <outlet property="historyMapView" destination="gKd-Ln-acb" id="nRd-GL-B3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chG-qU-GSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184.8" y="1531.4842578710645"/>
+        </scene>
+        <!--足跡マップ-->
+        <scene sceneID="K2M-34-g7a">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mEy-2f-hmL" customClass="BaseNavigationController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="足跡マップ" image="map" id="jhs-2b-O2l"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iUi-pt-HR0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nbJ-cC-FXV" kind="relationship" relationship="rootViewController" id="ke8-Ar-WEP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhK-98-kkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472" y="1532.833583208396"/>
+        </scene>
+        <!--現在地の記録-->
+        <scene sceneID="OFp-83-bos">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dNN-gO-QkP" customClass="BaseNavigationController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="現在地の記録" image="rec" id="ROM-P3-MZR"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H4f-QQ-Mh6">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6uH-fy-p9j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlT-5k-r1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" width="20" height="20"/>
+        <image name="pins" width="20" height="20"/>
+        <image name="rec" width="20" height="20"/>
+        <image name="stamp" width="64" height="64"/>
+    </resources>
+</document>
