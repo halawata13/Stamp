@@ -9,7 +9,7 @@ final class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
 
         tabBar.barTintColor = UIColor(red: 0 / 255, green: 171 / 255, blue: 141 / 255, alpha: 1)
-        UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 222 / 255, green: 222 / 255, blue: 222 / 255, alpha: 1)
+        UITabBar.appearance().tintColor = UIColor(red: 212 / 255, green: 253 / 255, blue: 246 / 255, alpha: 1)
+        UITabBar.appearance().unselectedItemTintColor = UIColor(red: 150 / 255, green: 227 / 255, blue: 214 / 255, alpha: 1)
     }
 }

@@ -33,7 +33,7 @@ final class LocationInfoView: UIView {
         }
 
         datetimeLabel.text = LocationService.convert(date: location.date! as Date, dateStyle: .medium, timeStyle: .medium)
-        latitudeLabel.text = LocationService.convert(latitude: location.latitude, convertType: .detail)
-        longitudeLabel.text = LocationService.convert(longitude: location.longitude, convertType: .detail)
+        latitudeLabel.text = LocationService.convert(latitude: location.latitude, convertType: .plain)
+        longitudeLabel.text = LocationService.convert(longitude: location.longitude, convertType: .plain)
     }
 }

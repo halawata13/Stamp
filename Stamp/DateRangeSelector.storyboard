@@ -43,7 +43,7 @@
                         <viewLayoutGuide key="safeArea" id="Ark-1X-cgN"/>
                     </view>
                     <navigationItem key="navigationItem" title="表示する期間" id="zI3-fF-PFW">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="GHz-9k-Lk1">
+                        <barButtonItem key="leftBarButtonItem" title="キャンセル" id="GHz-9k-Lk1">
                             <connections>
                                 <action selector="onTapCancelButton:" destination="601-yL-EQl" id="YGL-Xj-ybp"/>
                             </connections>

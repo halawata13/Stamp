@@ -10,7 +10,7 @@ final class HistoryMapView: MKMapView {
         if let location = locations.last {
             var region = self.region
             region.center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-            region.span = MKCoordinateSpanMake(0.1, 0.1)
+            region.span = MKCoordinateSpanMake(0.05, 0.05)
 
             setRegion(region, animated: false)
         }
@@ -22,6 +22,7 @@ final class HistoryMapView: MKMapView {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             annotation.title = LocationService.convert(date: location.date! as Date, dateStyle: .short, timeStyle: .none)
+            annotation.subtitle = location.memo
 
             annotations.append(annotation)
         }

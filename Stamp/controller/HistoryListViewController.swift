@@ -43,6 +43,10 @@ final class HistoryListViewController: UIViewController {
         }
     }
 
+    @IBAction func onTapDeleteButtonItem(_ sender: UIBarButtonItem) {
+        historyTableView.setEditing(!historyTableView.isEditing, animated: true)
+    }
+
     func reloadLocation() {
         let dateRangeService = DateRangeService()
         dateRange = dateRangeService.load()
