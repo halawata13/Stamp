@@ -37,7 +37,6 @@
 		CAE7454BFA50EBC3B9F5AD5B /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74DA92AA392FE1B363908 /* BaseNavigationController.swift */; };
 		CAE746A6ACE76FD77F575946 /* SnapshotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE744EC038F91F237002530 /* SnapshotService.swift */; };
 		CAE747947B7876F336E96F8C /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74CF4D66E07399C7315AF /* DateRange.swift */; };
-		CAE748C6457A0E7813D3A3BD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74B861D6FAF9F3F8FD779 /* UIViewController.swift */; };
 		CAE749BAB04ED23834D8B072 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */; };
 		CAE74AC37B4B41F28FC86D2F /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74017A45377DF0A9DC2F4 /* HistoryListViewController.swift */; };
 		CAE74CBA542DC4CABBCB7115 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7414735B5EDD04E71508F /* Date.swift */; };
@@ -105,7 +104,6 @@
 		CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeService.swift; sourceTree = "<group>"; };
 		CAE7485A57B0D57FD71DF82C /* AlertDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		CAE7495EDA2FD26E92D0300C /* HistoryTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewDataSource.swift; sourceTree = "<group>"; };
-		CAE74B861D6FAF9F3F8FD779 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CAE74BACCDB0031C119B7C96 /* HistoryMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryMapViewController.swift; sourceTree = "<group>"; };
 		CAE74CF4D66E07399C7315AF /* DateRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRange.swift; sourceTree = "<group>"; };
 		CAE74DA92AA392FE1B363908 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 		CAE74FFD36A2BDE857173832 /* extension */ = {
 			isa = PBXGroup;
 			children = (
-				CAE74B861D6FAF9F3F8FD779 /* UIViewController.swift */,
 				CAE7414735B5EDD04E71508F /* Date.swift */,
 			);
 			path = extension;
@@ -430,7 +427,6 @@
 				4E2670DE205516BF0045932D /* Stamp.xcdatamodeld in Sources */,
 				4E2670D6205516BF0045932D /* AppDelegate.swift in Sources */,
 				4E26711C20551DE90045932D /* Location+CoreDataProperties.swift in Sources */,
-				CAE748C6457A0E7813D3A3BD /* UIViewController.swift in Sources */,
 				CAE74203B3107FD962D87579 /* HistoryDetailViewController.swift in Sources */,
 				CAE74260340308E89339F40B /* BaseTabBarController.swift in Sources */,
 				CAE74AC37B4B41F28FC86D2F /* HistoryListViewController.swift in Sources */,

@@ -6,7 +6,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-final class MainViewController: UIViewController {
+final class MainViewController: UIViewController, AlertDialog {
     private var locationManager: CLLocationManager!
 
     @IBOutlet private weak var mapView: SingleLocationMapView!
@@ -34,7 +34,7 @@ final class MainViewController: UIViewController {
 
     @IBAction func onTapRecordButton(_ sender: UIButton) {
         // 現在地の記録
-        makeAuthorizationDialog(message: "現在地を記録しますか？", title: "確認") { [weak self] (action) in
+        showAuthorizationAlert(message: "現在地を記録しますか？", title: "確認") { [weak self] (action) in
             guard let center = self?.mapView.region.center else {
                 return
             }
@@ -50,18 +50,25 @@ final class MainViewController: UIViewController {
 
 extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        // 大元の位置情報サービスの許可チェック
+        if CLLocationManager.locationServicesEnabled() == false {
+            showConfirmAlert(message: "位置情報サービスがONになっていないため、現在地を記録できません。")
+            recordButton.isHidden = true
+            return
+        }
+
         // 権限チェック
         switch status {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .denied:
-            makeConfirmDialog(message: "位置情報サービスが無効になっているため、現在地を記録できません")
+            showSettingsAlert(message: "位置情報サービスの利用が許可されていないため、現在地を記録できません。")
             recordButton.isHidden = true
         case .restricted:
-            makeConfirmDialog(message: "位置情報サービスが無効になっているため、現在地を記録できません")
+            showConfirmAlert(message: "位置情報サービスの利用が制限されているため、現在地を記録できません。")
             recordButton.isHidden = true
         case .authorizedAlways:
-            break
+            fallthrough
         case .authorizedWhenInUse:
             recordButton.isHidden = false
             locationManager.startUpdatingLocation()

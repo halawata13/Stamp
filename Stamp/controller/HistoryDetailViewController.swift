@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 import MapKit
 
-final class HistoryDetailViewController: UIViewController, MapSnapshotShare {
+final class HistoryDetailViewController: UIViewController, MapSnapshotShare, AlertDialog {
     var location: Location?
 
     @IBOutlet private weak var mapView: SingleLocationMapView!
@@ -59,7 +59,7 @@ extension HistoryDetailViewController: UITextFieldDelegate {
            let memo = textField.text {
             // メモを更新
             if !LocationService.update(id: id, memo: memo) {
-                makeConfirmDialog(message: "タイトルの入力に失敗しました")
+                showConfirmAlert(message: "タイトルの入力に失敗しました")
             }
         }
     }
