@@ -21,10 +21,10 @@ extension DateRangeLabelViewDelegate where Self: UIViewController {
     }
 
     func datePickerDidEndEditing() {
-        // optional
+        // noop
     }
 
     func datePickerWillShouldBeginEditing() {
-        // optional
+        // noop
     }
 }

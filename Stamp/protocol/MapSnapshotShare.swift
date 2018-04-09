@@ -49,6 +49,7 @@ extension MapSnapshotShare where Self: UIViewController {
             let excluded = [
                 UIActivityType.print,
                 UIActivityType.saveToCameraRoll,
+                UIActivityType.assignToContact,
             ]
 
             activityController.excludedActivityTypes = excluded
