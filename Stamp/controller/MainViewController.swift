@@ -40,9 +40,9 @@ final class MainViewController: UIViewController, AlertDialog {
             }
 
             if let location = LocationService.insert(coordinate: center),
-               let historyDetailViewController = self?.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController {
-                historyDetailViewController.location = location
-                self?.navigationController?.pushViewController(historyDetailViewController, animated: true)
+               let singleMapViewController = self?.storyboard?.instantiateViewController(withIdentifier: "SingleMapViewController") as? SingleMapViewController {
+                singleMapViewController.location = location
+                self?.navigationController?.pushViewController(singleMapViewController, animated: true)
             }
         }
     }

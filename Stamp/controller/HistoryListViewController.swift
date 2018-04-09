@@ -32,14 +32,14 @@ final class HistoryListViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HistoryDetailSegue" {
-            guard let historyDetailViewController = segue.destination as? HistoryDetailViewController,
+        if segue.identifier == "SingleMapSegue" {
+            guard let singleMapViewController = segue.destination as? SingleMapViewController,
                   let indexPath = historyTableView.indexPathForSelectedRow else {
                 assertionFailure()
                 return
             }
 
-            historyDetailViewController.location = historyTableViewDataSource.getLocation(indexPath: indexPath)
+            singleMapViewController.location = historyTableViewDataSource.getLocation(indexPath: indexPath)
         }
     }
 

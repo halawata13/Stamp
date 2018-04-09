@@ -116,7 +116,7 @@
                                             <outlet property="coordinateLabel" destination="7it-Wd-Dwj" id="Oq8-nN-pCh"/>
                                             <outlet property="memoLabel" destination="3nh-Fw-ldC" id="dfl-q4-wNj"/>
                                             <outlet property="timeLabel" destination="idC-Ni-Qhk" id="sfj-Bh-DMH"/>
-                                            <segue destination="n3b-6j-Itx" kind="show" identifier="HistoryDetailSegue" id="qbA-QO-172"/>
+                                            <segue destination="n3b-6j-Itx" kind="show" identifier="SingleMapSegue" id="qbA-QO-172"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="1184.8" y="826.23688155922048"/>
         </scene>
-        <!--History Detail View Controller-->
+        <!--Single Map View Controller-->
         <scene sceneID="VmJ-qa-Zxq">
             <objects>
-                <viewController storyboardIdentifier="HistoryDetailViewController" id="n3b-6j-Itx" customClass="HistoryDetailViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingleMapViewController" id="n3b-6j-Itx" customClass="SingleMapViewController" customModule="Stamp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2B2-BP-XeD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIl-Uh-Dn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1896.8" y="825.33733133433293"/>
+            <point key="canvasLocation" x="1950" y="487"/>
         </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="NYY-kM-uYi">

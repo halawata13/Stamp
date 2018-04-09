@@ -31,7 +31,7 @@
 		CAE74046B5FEAFC870AE1DEB /* HistoryTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7495EDA2FD26E92D0300C /* HistoryTableViewDataSource.swift */; };
 		CAE741A26FCDFECBCE6786F1 /* HistoryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74BACCDB0031C119B7C96 /* HistoryMapViewController.swift */; };
 		CAE741E3EC71BBD6B25D97A3 /* MapSnapshotShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7405174C90927F28CEBFD /* MapSnapshotShare.swift */; };
-		CAE74203B3107FD962D87579 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74311FD153612AE9C3884 /* HistoryDetailViewController.swift */; };
+		CAE74203B3107FD962D87579 /* SingleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74311FD153612AE9C3884 /* SingleMapViewController.swift */; };
 		CAE74260340308E89339F40B /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */; };
 		CAE74497F451455B2CCE905B /* DateRangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */; };
 		CAE7454BFA50EBC3B9F5AD5B /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74DA92AA392FE1B363908 /* BaseNavigationController.swift */; };
@@ -97,7 +97,7 @@
 		CAE7414735B5EDD04E71508F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CAE741E6F2A35A0498E8DDDC /* DateRangeLabelViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeLabelViewDelegate.swift; sourceTree = "<group>"; };
 		CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		CAE74311FD153612AE9C3884 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		CAE74311FD153612AE9C3884 /* SingleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMapViewController.swift; sourceTree = "<group>"; };
 		CAE744EC038F91F237002530 /* SnapshotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotService.swift; sourceTree = "<group>"; };
 		CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		CAE74571661CC54BE45EBE4B /* DateRangeSelectorTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeSelectorTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		CAE745382AAEC14B606C1312 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				CAE74311FD153612AE9C3884 /* HistoryDetailViewController.swift */,
+				CAE74311FD153612AE9C3884 /* SingleMapViewController.swift */,
 				CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */,
 				CAE74017A45377DF0A9DC2F4 /* HistoryListViewController.swift */,
 				CAE74EA28C3232FDCCD813AA /* MainViewController.swift */,
@@ -427,7 +427,7 @@
 				4E2670DE205516BF0045932D /* Stamp.xcdatamodeld in Sources */,
 				4E2670D6205516BF0045932D /* AppDelegate.swift in Sources */,
 				4E26711C20551DE90045932D /* Location+CoreDataProperties.swift in Sources */,
-				CAE74203B3107FD962D87579 /* HistoryDetailViewController.swift in Sources */,
+				CAE74203B3107FD962D87579 /* SingleMapViewController.swift in Sources */,
 				CAE74260340308E89339F40B /* BaseTabBarController.swift in Sources */,
 				CAE74AC37B4B41F28FC86D2F /* HistoryListViewController.swift in Sources */,
 				CAE74F3306455E947DA0CC40 /* MainViewController.swift in Sources */,
