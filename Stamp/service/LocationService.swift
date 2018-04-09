@@ -9,10 +9,10 @@ class LocationService {
     ///
     /// 座標を追加する
     ///
-    static func insert(coordinate: CLLocationCoordinate2D) {
+    static func insert(coordinate: CLLocationCoordinate2D) -> Location? {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             assertionFailure()
-            return
+            return nil
         }
 
         let context = appDelegate.persistentContainer.viewContext
@@ -26,9 +26,7 @@ class LocationService {
 
         context.insert(location)
 
-        try? context.save()
-
-        //appDelegate.saveContext()
+        return (try? context.save()) != nil ? location : nil
     }
 
     ///

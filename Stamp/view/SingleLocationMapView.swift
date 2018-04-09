@@ -5,18 +5,17 @@
 import MapKit
 
 final class SingleLocationMapView: MKMapView {
+    static let latitudinalMeters: Double = 500
+    static let longitudinalMeters: Double = 500
+
     func setLocation(_ location: Location) {
-        var region = self.region
-        region.center = CLLocationCoordinate2DMake(location.latitude, location.longitude)
-        region.span = MKCoordinateSpanMake(0.005, 0.005)
+        let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(location.latitude, location.longitude), SingleLocationMapView.latitudinalMeters, SingleLocationMapView.longitudinalMeters)
 
         setRegion(region, animated: false)
     }
 
     func setLocation(_ location: CLLocation) {
-        var region = self.region
-        region.center = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        region.span = MKCoordinateSpanMake(0.005, 0.005)
+        let region = MKCoordinateRegionMakeWithDistance(CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), SingleLocationMapView.latitudinalMeters, SingleLocationMapView.longitudinalMeters)
 
         setRegion(region, animated: false)
     }

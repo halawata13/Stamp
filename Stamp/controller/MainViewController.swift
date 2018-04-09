@@ -35,8 +35,14 @@ final class MainViewController: UIViewController {
     @IBAction func onTapRecordButton(_ sender: UIButton) {
         // 現在地の記録
         makeAuthorizationDialog(message: "現在地を記録しますか？", title: "確認") { [weak self] (action) in
-            if let center = self?.mapView.region.center {
-                LocationService.insert(coordinate: center)
+            guard let center = self?.mapView.region.center else {
+                return
+            }
+
+            if let location = LocationService.insert(coordinate: center),
+               let historyDetailViewController = self?.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController {
+                historyDetailViewController.location = location
+                self?.navigationController?.pushViewController(historyDetailViewController, animated: true)
             }
         }
     }

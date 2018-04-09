@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 import MapKit
 
-final class HistoryDetailViewController: UIViewController {
+final class HistoryDetailViewController: UIViewController, MapSnapshotShare {
     var location: Location?
 
     @IBOutlet private weak var mapView: SingleLocationMapView!
@@ -37,11 +37,18 @@ final class HistoryDetailViewController: UIViewController {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapView))
         tapGestureRecognizer.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGestureRecognizer)
+
+        // navigationBarItem
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share"), style: .plain, target: self, action: #selector(onTapShareButton))
     }
 
     @objc func tapView() {
         // 画面をタップしたときにキーボードを下げる
         locationInfoView.titleTextField.resignFirstResponder()
+    }
+
+    @objc func onTapShareButton() {
+        shareMapSnapshot(region: mapView.region)
     }
 }
 
@@ -52,7 +59,7 @@ extension HistoryDetailViewController: UITextFieldDelegate {
            let memo = textField.text {
             // メモを更新
             if !LocationService.update(id: id, memo: memo) {
-                makeToast(message: "タイトルの入力に失敗しました")
+                makeConfirmDialog(message: "タイトルの入力に失敗しました")
             }
         }
     }

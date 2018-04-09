@@ -24,23 +24,25 @@
 		4E44559E206F1FB800FD88E1 /* DateRangeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E44559D206F1FB800FD88E1 /* DateRangeLabelView.swift */; };
 		4E5EF0082072043B00E782AE /* DateRangeSelector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5EF0072072043B00E782AE /* DateRangeSelector.storyboard */; };
 		4E70BB24205A543C00857009 /* HistoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E70BB22205A543C00857009 /* HistoryListTableViewCell.swift */; };
-		4E97D0402073480400DFF532 /* ToastSwiftFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E96BEBC205F45B80024C402 /* ToastSwiftFramework.framework */; };
 		4EA9CD8C206C7ABF0062EC7B /* SingleLocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8B206C7ABF0062EC7B /* SingleLocationMapView.swift */; };
 		4EA9CD8E206C7C6D0062EC7B /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8D206C7C6D0062EC7B /* LocationInfoView.swift */; };
 		4EA9CD90206C7ED00062EC7B /* LocationInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8F206C7ED00062EC7B /* LocationInfoView.xib */; };
 		4EB19306206B33CF00ABF1C2 /* HistoryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB19305206B33CF00ABF1C2 /* HistoryMapView.swift */; };
 		CAE74046B5FEAFC870AE1DEB /* HistoryTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7495EDA2FD26E92D0300C /* HistoryTableViewDataSource.swift */; };
 		CAE741A26FCDFECBCE6786F1 /* HistoryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74BACCDB0031C119B7C96 /* HistoryMapViewController.swift */; };
+		CAE741E3EC71BBD6B25D97A3 /* MapSnapshotShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7405174C90927F28CEBFD /* MapSnapshotShare.swift */; };
 		CAE74203B3107FD962D87579 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74311FD153612AE9C3884 /* HistoryDetailViewController.swift */; };
 		CAE74260340308E89339F40B /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */; };
 		CAE74497F451455B2CCE905B /* DateRangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */; };
 		CAE7454BFA50EBC3B9F5AD5B /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74DA92AA392FE1B363908 /* BaseNavigationController.swift */; };
+		CAE746A6ACE76FD77F575946 /* SnapshotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE744EC038F91F237002530 /* SnapshotService.swift */; };
 		CAE747947B7876F336E96F8C /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74CF4D66E07399C7315AF /* DateRange.swift */; };
 		CAE748C6457A0E7813D3A3BD /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74B861D6FAF9F3F8FD779 /* UIViewController.swift */; };
 		CAE749BAB04ED23834D8B072 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */; };
 		CAE74AC37B4B41F28FC86D2F /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74017A45377DF0A9DC2F4 /* HistoryListViewController.swift */; };
 		CAE74CBA542DC4CABBCB7115 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7414735B5EDD04E71508F /* Date.swift */; };
 		CAE74DB733E11BE117DB472A /* DateRangeLabelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE741E6F2A35A0498E8DDDC /* DateRangeLabelViewDelegate.swift */; };
+		CAE74E9BC39011572A50BA41 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7485A57B0D57FD71DF82C /* AlertDialog.swift */; };
 		CAE74EE3718289EDC30D3A75 /* DateRangeSelectorTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74571661CC54BE45EBE4B /* DateRangeSelectorTableViewDataSource.swift */; };
 		CAE74F3306455E947DA0CC40 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74EA28C3232FDCCD813AA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
@@ -92,13 +94,16 @@
 		4EA9CD8F206C7ED00062EC7B /* LocationInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInfoView.xib; sourceTree = "<group>"; };
 		4EB19305206B33CF00ABF1C2 /* HistoryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMapView.swift; sourceTree = "<group>"; };
 		CAE74017A45377DF0A9DC2F4 /* HistoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
+		CAE7405174C90927F28CEBFD /* MapSnapshotShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSnapshotShare.swift; sourceTree = "<group>"; };
 		CAE7414735B5EDD04E71508F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CAE741E6F2A35A0498E8DDDC /* DateRangeLabelViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeLabelViewDelegate.swift; sourceTree = "<group>"; };
 		CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		CAE74311FD153612AE9C3884 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		CAE744EC038F91F237002530 /* SnapshotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotService.swift; sourceTree = "<group>"; };
 		CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		CAE74571661CC54BE45EBE4B /* DateRangeSelectorTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeSelectorTableViewDataSource.swift; sourceTree = "<group>"; };
 		CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeService.swift; sourceTree = "<group>"; };
+		CAE7485A57B0D57FD71DF82C /* AlertDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		CAE7495EDA2FD26E92D0300C /* HistoryTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewDataSource.swift; sourceTree = "<group>"; };
 		CAE74B861D6FAF9F3F8FD779 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		CAE74BACCDB0031C119B7C96 /* HistoryMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryMapViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E97D0402073480400DFF532 /* ToastSwiftFramework.framework in Frameworks */,
 				4E267108205517600045932D /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				CAE741E6F2A35A0498E8DDDC /* DateRangeLabelViewDelegate.swift */,
+				CAE7405174C90927F28CEBFD /* MapSnapshotShare.swift */,
+				CAE7485A57B0D57FD71DF82C /* AlertDialog.swift */,
 			);
 			path = protocol;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			children = (
 				CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */,
 				CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */,
+				CAE744EC038F91F237002530 /* SnapshotService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -288,7 +295,6 @@
 				4E2670CE205516BF0045932D /* Sources */,
 				4E2670CF205516BF0045932D /* Frameworks */,
 				4E2670D0205516BF0045932D /* Resources */,
-				4E97D0412073480B00DFF532 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -411,23 +417,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4E97D0412073480B00DFF532 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ToastSwiftFramework.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4E2670CE205516BF0045932D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -459,6 +448,9 @@
 				CAE74DB733E11BE117DB472A /* DateRangeLabelViewDelegate.swift in Sources */,
 				CAE74497F451455B2CCE905B /* DateRangeService.swift in Sources */,
 				CAE7454BFA50EBC3B9F5AD5B /* BaseNavigationController.swift in Sources */,
+				CAE746A6ACE76FD77F575946 /* SnapshotService.swift in Sources */,
+				CAE741E3EC71BBD6B25D97A3 /* MapSnapshotShare.swift in Sources */,
+				CAE74E9BC39011572A50BA41 /* AlertDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
