@@ -6,8 +6,8 @@ import Foundation
 import MapKit
 
 final class SnapshotService {
-    let options = MKMapSnapshotOptions()
-    let snapshotter: MKMapSnapshotter
+    private let options = MKMapSnapshotOptions()
+    private let snapshotter: MKMapSnapshotter
 
     init(region: MKCoordinateRegion) {
         options.region = region

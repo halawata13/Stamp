@@ -27,10 +27,6 @@ final class HistoryListViewController: UIViewController {
         reloadView()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SingleMapSegue" {
             guard let singleMapViewController = segue.destination as? SingleMapViewController,

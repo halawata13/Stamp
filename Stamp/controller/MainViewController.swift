@@ -80,7 +80,6 @@ extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         for location in locations {
             mapView.setLocation(location)
-            mapView.setAnnotation(title: "現在地")
         }
     }
 }

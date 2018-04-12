@@ -64,7 +64,11 @@ final class SingleMapViewController: UIViewController, MapSnapshotShare, AlertDi
     }
 
     @objc func onTapShareButton() {
-        shareMapSnapshot(region: mapView.region)
+        guard let location = location else {
+            return
+        }
+
+        shareMapSnapshot(region: MKCoordinateRegionMake(CLLocationCoordinate2DMake(location.latitude, location.longitude), mapView.region.span))
     }
 
     @objc func keyboardWillShow(notification: Notification?) {

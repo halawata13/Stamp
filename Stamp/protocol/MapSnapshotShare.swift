@@ -13,7 +13,7 @@ extension MapSnapshotShare where Self: UIViewController {
     func shareMapSnapshot(region: MKCoordinateRegion) {
         let snapshotService = SnapshotService(region: region)
         snapshotService.shot { [weak self] (snapshot: MKMapSnapshot?, error: Error?) in
-            guard let snapshot = snapshot, error == nil else {
+            guard let snapshot = snapshot, error == nil, let view = self?.view else {
                 assertionFailure()
                 return
             }
@@ -53,6 +53,8 @@ extension MapSnapshotShare where Self: UIViewController {
             ]
 
             activityController.excludedActivityTypes = excluded
+            activityController.popoverPresentationController?.sourceView = view
+            activityController.popoverPresentationController?.sourceRect = CGRect(x: view.bounds.size.width / 2, y: view.bounds.size.height / 2, width: 1, height: 1)
 
             self?.present(activityController, animated: true)
         }
