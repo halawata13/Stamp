@@ -10,6 +10,8 @@ protocol AlertDialog: class {
     func showAuthorizationAlert(message: String, title: String, handler: ((UIAlertAction) -> Void)?)
 
     func showSettingsAlert(message: String, title: String)
+
+    func showToast(message: String, title: String?, duration: Double)
 }
 
 extension AlertDialog where Self: UIViewController {
@@ -53,5 +55,19 @@ extension AlertDialog where Self: UIViewController {
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
+    }
+
+    ///
+    /// Toast を表示する
+    ///
+    func showToast(message: String, title: String? = nil, duration: Double = 1.0) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+
+        present(alertController, animated: true, completion: {
+            // アラートを閉じる
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                alertController.dismiss(animated: true)
+            }
+        })
     }
 }

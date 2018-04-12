@@ -43,6 +43,8 @@ final class MainViewController: UIViewController, AlertDialog {
                let singleMapViewController = self?.storyboard?.instantiateViewController(withIdentifier: "SingleMapViewController") as? SingleMapViewController {
                 singleMapViewController.location = location
                 self?.navigationController?.pushViewController(singleMapViewController, animated: true)
+
+                self?.showToast(message: "現在地を記録しました")
             }
         }
     }
