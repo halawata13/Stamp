@@ -12,7 +12,6 @@
 		4E2670DE205516BF0045932D /* Stamp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E2670DC205516BF0045932D /* Stamp.xcdatamodeld */; };
 		4E2670E0205516BF0045932D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E2670DF205516BF0045932D /* Assets.xcassets */; };
 		4E2670E3205516BF0045932D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E2670E1205516BF0045932D /* LaunchScreen.storyboard */; };
-		4E2670EE205516BF0045932D /* StampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2670ED205516BF0045932D /* StampTests.swift */; };
 		4E2670F9205516C00045932D /* StampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2670F8205516C00045932D /* StampUITests.swift */; };
 		4E267108205517600045932D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E267107205517600045932D /* MapKit.framework */; };
 		4E26711B20551DE90045932D /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E26711920551DE90045932D /* Location+CoreDataClass.swift */; };
@@ -28,6 +27,8 @@
 		4EA9CD8E206C7C6D0062EC7B /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8D206C7C6D0062EC7B /* LocationInfoView.swift */; };
 		4EA9CD90206C7ED00062EC7B /* LocationInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8F206C7ED00062EC7B /* LocationInfoView.xib */; };
 		4EB19306206B33CF00ABF1C2 /* HistoryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB19305206B33CF00ABF1C2 /* HistoryMapView.swift */; };
+		4EB60D9A209C36FF007FC085 /* DateRangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB60D99209C36FF007FC085 /* DateRangeTests.swift */; };
+		4EDC434D209BF44D00FB8104 /* LocationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC434C209BF44D00FB8104 /* LocationServiceTests.swift */; };
 		CAE74046B5FEAFC870AE1DEB /* HistoryTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7495EDA2FD26E92D0300C /* HistoryTableViewDataSource.swift */; };
 		CAE741A26FCDFECBCE6786F1 /* HistoryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74BACCDB0031C119B7C96 /* HistoryMapViewController.swift */; };
 		CAE741E3EC71BBD6B25D97A3 /* MapSnapshotShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7405174C90927F28CEBFD /* MapSnapshotShare.swift */; };
@@ -39,6 +40,7 @@
 		CAE747947B7876F336E96F8C /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74CF4D66E07399C7315AF /* DateRange.swift */; };
 		CAE749BAB04ED23834D8B072 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */; };
 		CAE74AC37B4B41F28FC86D2F /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74017A45377DF0A9DC2F4 /* HistoryListViewController.swift */; };
+		CAE74C030E314E1F353E83C7 /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE745C32F55F92E3D593C3E /* DateTests.swift */; };
 		CAE74CBA542DC4CABBCB7115 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7414735B5EDD04E71508F /* Date.swift */; };
 		CAE74DB733E11BE117DB472A /* DateRangeLabelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE741E6F2A35A0498E8DDDC /* DateRangeLabelViewDelegate.swift */; };
 		CAE74E9BC39011572A50BA41 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7485A57B0D57FD71DF82C /* AlertDialog.swift */; };
@@ -72,7 +74,6 @@
 		4E2670E2205516BF0045932D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E2670E4205516BF0045932D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E2670E9205516BF0045932D /* StampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StampTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E2670ED205516BF0045932D /* StampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampTests.swift; sourceTree = "<group>"; };
 		4E2670EF205516BF0045932D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E2670F4205516C00045932D /* StampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StampUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E2670F8205516C00045932D /* StampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampUITests.swift; sourceTree = "<group>"; };
@@ -92,6 +93,8 @@
 		4EA9CD8D206C7C6D0062EC7B /* LocationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoView.swift; sourceTree = "<group>"; };
 		4EA9CD8F206C7ED00062EC7B /* LocationInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationInfoView.xib; sourceTree = "<group>"; };
 		4EB19305206B33CF00ABF1C2 /* HistoryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryMapView.swift; sourceTree = "<group>"; };
+		4EB60D99209C36FF007FC085 /* DateRangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangeTests.swift; sourceTree = "<group>"; };
+		4EDC434C209BF44D00FB8104 /* LocationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceTests.swift; sourceTree = "<group>"; };
 		CAE74017A45377DF0A9DC2F4 /* HistoryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
 		CAE7405174C90927F28CEBFD /* MapSnapshotShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSnapshotShare.swift; sourceTree = "<group>"; };
 		CAE7414735B5EDD04E71508F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		CAE744EC038F91F237002530 /* SnapshotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotService.swift; sourceTree = "<group>"; };
 		CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		CAE74571661CC54BE45EBE4B /* DateRangeSelectorTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeSelectorTableViewDataSource.swift; sourceTree = "<group>"; };
+		CAE745C32F55F92E3D593C3E /* DateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
 		CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeService.swift; sourceTree = "<group>"; };
 		CAE7485A57B0D57FD71DF82C /* AlertDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		CAE7495EDA2FD26E92D0300C /* HistoryTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -183,8 +187,9 @@
 		4E2670EC205516BF0045932D /* StampTests */ = {
 			isa = PBXGroup;
 			children = (
-				4E2670ED205516BF0045932D /* StampTests.swift */,
+				4EDC434B209BF41700FB8104 /* service */,
 				4E2670EF205516BF0045932D /* Info.plist */,
+				CAE742C89D721DED888398B9 /* extension */,
 			);
 			path = StampTests;
 			sourceTree = "<group>";
@@ -221,6 +226,23 @@
 				4E282F682074B26100401D64 /* RecordButton.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		4EDC434B209BF41700FB8104 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				4EDC434C209BF44D00FB8104 /* LocationServiceTests.swift */,
+				4EB60D99209C36FF007FC085 /* DateRangeTests.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		CAE742C89D721DED888398B9 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				CAE745C32F55F92E3D593C3E /* DateTests.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		CAE745382AAEC14B606C1312 /* controller */ = {
@@ -454,7 +476,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E2670EE205516BF0045932D /* StampTests.swift in Sources */,
+				4EB60D9A209C36FF007FC085 /* DateRangeTests.swift in Sources */,
+				CAE74C030E314E1F353E83C7 /* DateTests.swift in Sources */,
+				4EDC434D209BF44D00FB8104 /* LocationServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
