@@ -22,6 +22,7 @@
 		4E44559C206F1F6100FD88E1 /* DateRangeLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E44559B206F1F6100FD88E1 /* DateRangeLabelView.xib */; };
 		4E44559E206F1FB800FD88E1 /* DateRangeLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E44559D206F1FB800FD88E1 /* DateRangeLabelView.swift */; };
 		4E5EF0082072043B00E782AE /* DateRangeSelector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5EF0072072043B00E782AE /* DateRangeSelector.storyboard */; };
+		4E60E5CE209D8E3700F19120 /* DateRangeSelectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60E5CD209D8E3700F19120 /* DateRangeSelectorUITests.swift */; };
 		4E70BB24205A543C00857009 /* HistoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E70BB22205A543C00857009 /* HistoryListTableViewCell.swift */; };
 		4EA9CD8C206C7ABF0062EC7B /* SingleLocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8B206C7ABF0062EC7B /* SingleLocationMapView.swift */; };
 		4EA9CD8E206C7C6D0062EC7B /* LocationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9CD8D206C7C6D0062EC7B /* LocationInfoView.swift */; };
@@ -35,6 +36,7 @@
 		CAE74203B3107FD962D87579 /* SingleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74311FD153612AE9C3884 /* SingleMapViewController.swift */; };
 		CAE74260340308E89339F40B /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */; };
 		CAE74497F451455B2CCE905B /* DateRangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE747DBEA6F22059FC8EDBD /* DateRangeService.swift */; };
+		CAE744E0DC65B7E731537530 /* MainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE742F62E317E73E4E210C1 /* MainUITests.swift */; };
 		CAE7454BFA50EBC3B9F5AD5B /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74DA92AA392FE1B363908 /* BaseNavigationController.swift */; };
 		CAE746A6ACE76FD77F575946 /* SnapshotService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE744EC038F91F237002530 /* SnapshotService.swift */; };
 		CAE747947B7876F336E96F8C /* DateRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE74CF4D66E07399C7315AF /* DateRange.swift */; };
@@ -87,6 +89,7 @@
 		4E44559B206F1F6100FD88E1 /* DateRangeLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateRangeLabelView.xib; sourceTree = "<group>"; };
 		4E44559D206F1FB800FD88E1 /* DateRangeLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangeLabelView.swift; sourceTree = "<group>"; };
 		4E5EF0072072043B00E782AE /* DateRangeSelector.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DateRangeSelector.storyboard; sourceTree = "<group>"; };
+		4E60E5CD209D8E3700F19120 /* DateRangeSelectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateRangeSelectorUITests.swift; sourceTree = "<group>"; };
 		4E70BB22205A543C00857009 /* HistoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListTableViewCell.swift; sourceTree = "<group>"; };
 		4E96BEBC205F45B80024C402 /* ToastSwiftFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ToastSwiftFramework.framework; path = Carthage/Build/iOS/ToastSwiftFramework.framework; sourceTree = "<group>"; };
 		4EA9CD8B206C7ABF0062EC7B /* SingleLocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationMapView.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		CAE7414735B5EDD04E71508F /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		CAE741E6F2A35A0498E8DDDC /* DateRangeLabelViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateRangeLabelViewDelegate.swift; sourceTree = "<group>"; };
 		CAE742DC0BB8F65D6784664A /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		CAE742F62E317E73E4E210C1 /* MainUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainUITests.swift; sourceTree = "<group>"; };
 		CAE74311FD153612AE9C3884 /* SingleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMapViewController.swift; sourceTree = "<group>"; };
 		CAE744EC038F91F237002530 /* SnapshotService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotService.swift; sourceTree = "<group>"; };
 		CAE74560E2A6F3898E9CC1B2 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 			children = (
 				4E2670F8205516C00045932D /* StampUITests.swift */,
 				4E2670FA205516C00045932D /* Info.plist */,
+				CAE742F62E317E73E4E210C1 /* MainUITests.swift */,
+				4E60E5CD209D8E3700F19120 /* DateRangeSelectorUITests.swift */,
 			);
 			path = StampUITests;
 			sourceTree = "<group>";
@@ -487,6 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E2670F9205516C00045932D /* StampUITests.swift in Sources */,
+				4E60E5CE209D8E3700F19120 /* DateRangeSelectorUITests.swift in Sources */,
+				CAE744E0DC65B7E731537530 /* MainUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

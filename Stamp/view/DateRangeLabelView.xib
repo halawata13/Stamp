@@ -36,6 +36,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quD-lj-3kx">
                             <rect key="frame" x="0.0" y="0.0" width="87" height="33"/>
+                            <accessibility key="accessibilityConfiguration" identifier="dateRangeButton"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="87" id="4cX-GX-gyT"/>
                             </constraints>

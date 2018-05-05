@@ -23,6 +23,7 @@
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNe-Vt-Qai" customClass="RecordButton" customModule="Stamp" customModuleProvider="target">
                                 <rect key="frame" x="155" y="524" width="64" height="64"/>
+                                <accessibility key="accessibilityConfiguration" identifier="recordButton"/>
                                 <state key="normal" image="stamp"/>
                                 <connections>
                                     <action selector="onTapRecordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HNN-Iz-zZe"/>
